@@ -1,0 +1,84 @@
+a.nav-link.active {
+    font-weight: 600;
+}
+
+div#hienthi div.card{
+   margin: 20px; 
+}
+
+h2.alert p{
+    color: black;
+    font-weight: bold;
+}
+
+/* login */
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+.h-custom {
+    height: fit-content
+}
+@media (max-width: 450px) {
+    .h-custom {
+    height: 100%;
+}
+}
+.form{
+    margin-top: 80px;
+}
+.div_h2{
+    color: blue;
+    padding-bottom: 20px;
+}
+#register{
+    padding-bottom: 10px;
+}
+.form2{
+    margin-top: 150px;
+}
+#login{
+    padding-bottom: 10px;
+}
+
+.error{
+    color: red;
+}
+
+/* CSS chitietbai */
+
+h1#chitietbai{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 4em;
+}
+
+
+/* CSS FOOTER */
+.footer{
+    /* background-color: #4F4F4F; */
+    color: wheat;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+#gtct{
+    
+    margin-right: 30px;
+}
+
+
+#tintuc_footer a{
+    text-decoration: none;
+    color: white;
+}
+/* #LKN_footer{
+    text-align: center;
+} */
+#LKN_footer a{
+    text-decoration: none;
+    color: white;
+}
+

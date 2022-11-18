@@ -1,0 +1,11 @@
+.main{
+    height: 600px;
+}
+
+#show_idx .card{
+    margin: 20px;
+}
+
+.main{
+    height: auto;
+}
