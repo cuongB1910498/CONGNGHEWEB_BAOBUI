@@ -3,17 +3,6 @@
     session_start();
     $found = false;
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $stmt = $pdo->prepare(
-			"insert into users(username, password, phone, address) values (:username, :pw, :phone, :address)"
-		);
-
-        $stmt->execute([
-			'username' => $_POST['username'],
-			'pw' => md5($_POST['password']) ,
-			'phone' => $_POST['phone'],
-			'address' => $_POST['address'],
-		]);
-        
         // kiem tra username
         $find_usn =$pdo->prepare(
             "SELECT * FROM users WHERE username = :usn LIMIT 1"
@@ -26,12 +15,19 @@
         $num = $find_usn->rowCount();
         if($num > 0){
             $found = true;
+        }else{
+            $stmt = $pdo->prepare(
+                "insert into users(username, password, phone, address) values (:username, :pw, :phone, :address)"
+            );
+    
+            $stmt->execute([
+                'username' => $_POST['username'],
+                'pw' => md5($_POST['password']) ,
+                'phone' => $_POST['phone'],
+                'address' => $_POST['address'],
+            ]);
         }
 
-
-
-        
-        
         if(isset($stmt)){
             $_SESSION['dangky'] = 1;
             header("Location: ../../index.php");
